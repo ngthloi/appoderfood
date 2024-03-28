@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fifth"
+    android:orientation="vertical"
+    tools:context=".activity.GioiThieuChungActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Gioithieuchung"
+        app:title="@string/introduce"
+        app:navigationIcon="@drawable/ic_back_button"
+        app:titleTextColor="@color/white"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <FrameLayout
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/margin_1_2"
+            android:layout_width="@dimen/wrap_cart_width"
+            android:layout_height="?attr/actionBarSize">
+            <FrameLayout
+                android:onClick="openCart"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/miniCart"
+                    android:src="@drawable/ic_cart"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.cardview.widget.CardView
+                    android:elevation="@dimen/margin_1"
+                    android:layout_gravity="top|left"
+                    app:cardCornerRadius="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@color/cost_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/thongbao_soluong"
+                        android:text="0"
+                        android:visibility="visible"
+                        android:textAlignment="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:background="@color/cost_color"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_marginTop="@dimen/margin_1_2"
+        android:layout_marginBottom="@dimen/margin_1_2"
+        android:background="@color/third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:onClick="ToHome"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/logo_app"
+                android:layout_marginRight="@dimen/margin_1_2"
+                android:layout_width="@dimen/logo_app_top"
+                android:layout_height="@dimen/app_name_width"/>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/archivoblack_regular"
+                android:paddingBottom="@dimen/padding_text"
+                android:text="@string/app_name"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_meidum"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+    <ScrollView
+        android:layout_margin="@dimen/margin_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_marginVertical="@dimen/margin_1"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_detail"
+                android:text="LỜI NÓI ĐẦU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:justificationMode="inter_word"
+                android:text="Công ty TNHH MINISHOP Việt Nam,
+\nKính gởi Quý khách hàng,
+\n
+\nTheo chiến lược mở các cửa hàng quy mô nhỏ tại các trung tâm đô thị của tập đoàn AEON, chúng tôi đang triển khai các cửa hàng combo MINISHOP tại thành phố Hồ Chí Minh, Việt Nam nơi có độ tuổi dân số trung bình vào khoảng 20 tuổi.
+\n
+\nVới sứ mệnh xây dựng xã hội tràn ngập nụ cười bằng sự “tươi ngon”, “thân thiện”, “tiện lợi”, MINISHOP chăm chút việc cung cấp từng sản phẩm đến Quý khách hàng, đặt mục tiêu trở thành cửa hàng không thể thiếu cho cuộc sống hằng ngày của Quý khách.
+\n
+\nMINISHOP không ngừng phấn đấu hoàn thiện cơ cấu hàng hóa với các sản phẩm cần thiết cho đời sống thường nhật để trở thành cửa hàng tiện lợi được Quý khách hàng lựa chọn sử dụng hàng ngày.
+\n
+\nNgoài ra, chúng tôi còn trang bị khu vực ăn uống trong cửa hàng COMBO, mô hình kết hợp giữa cửa hàng tiện lợi và cửa hàng thức ăn nhanh chế biến tại chỗ để trở thành cửa hàng phù hợp với lối sống của Quý khách và để MINISHOP trở thành nơi Quý khách hàng có thể trò chuyện thư giãn và thưởng thức các món ăn ngon.
+\n
+\nCó thể nói trong các ngành nghề, cửa hàng tiện lợi chính là ngành nghề đáp ứng nhu cầu ngày càng đa dạng của khách hàng và ngày càng phát triển hơn.
+\n
+\nBằng việc nắm bắt những thay đổi trong nhu cầu của khách hàng và không ngừng thực hiện những cải cách mới, MINISHOP sẽ phấn đấu để tiếp tục hoàn thiện mình hơn nữa.
+\n
+\n
+Trân trọng."
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:layout_marginVertical="@dimen/margin_1"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_detail"
+                android:text="LOGO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginVertical="@dimen/margin_1_2"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_app"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/item_card_home_height"/>
+
+            <TextView
+                android:layout_marginVertical="@dimen/margin_1"
+                android:textColor="@color/primary"
+                android:textStyle="italic"
+                android:textSize="@dimen/text_size_title"
+                android:text="Ý nghĩa logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:justificationMode="inter_word"
+                android:text="Biểu tượng thương hiệu của MINISHOP (được gọi là House mark) lấy mô-típ từ hình ngôi nhà và tán cây, có chữ MINISHOP bên trong, mang ý nghĩa là “nơi nghỉ ngơi của bạn ở góc phố”.
+\nTại đây, MINISHOP mong muốn mang lại cho khách hàng “Cảm giác giản dị và ấm áp như trong chính ngôi nhà của mình”.
+\nVới sự hiện diện ở nhiều khu vực, MINISHOP đã và đang cung cấp các loại dịch vụ, hàng hóa đa dạng đến khách hàng, nhằm thay đổi cuộc sống sinh hoạt hằng ngày thành một “tương lai mơ ước”."
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:layout_marginVertical="@dimen/margin_1"
+                android:textColor="@color/primary"
+                android:textStyle="italic"
+                android:textSize="@dimen/text_size_title"
+                android:text="Ý nghĩa tên gọi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:justificationMode="inter_word"
+                android:text="
+Ban đầu, từ “Minute Shop” có nghĩa là “Cửa hàng ở góc phố”, nhưng để dễ dàng phát âm và trở nên quen thuộc với người Nhật hơn, người ta đã chuyển thành “MINISHOP”."
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_title" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

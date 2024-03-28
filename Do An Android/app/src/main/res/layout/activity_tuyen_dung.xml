@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/fifth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TuyenDungActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_TuyenDung"
+        app:title="@string/apply"
+        app:navigationIcon="@drawable/ic_back_button"
+        app:titleTextColor="@color/white"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <FrameLayout
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/margin_1_2"
+            android:layout_width="@dimen/wrap_cart_width"
+            android:layout_height="?attr/actionBarSize">
+            <FrameLayout
+                android:onClick="openCart"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/miniCart"
+                    android:src="@drawable/ic_cart"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.cardview.widget.CardView
+                    android:elevation="@dimen/margin_1"
+                    android:layout_gravity="top|left"
+                    app:cardCornerRadius="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@color/cost_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/thongbao_soluong"
+                        android:text="0"
+                        android:visibility="visible"
+                        android:textAlignment="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:background="@color/cost_color"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_marginTop="@dimen/margin_1_2"
+        android:layout_marginBottom="@dimen/margin_1_2"
+        android:background="@color/third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:onClick="ToHome"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/logo_app"
+                android:layout_marginRight="@dimen/margin_1_2"
+                android:layout_width="@dimen/logo_app_top"
+                android:layout_height="@dimen/app_name_width"/>
+            <TextView
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/archivoblack_regular"
+                android:paddingBottom="@dimen/padding_text"
+                android:text="@string/app_name"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginEnd="@dimen/margin_1"
+                    android:layout_marginBottom="@dimen/margin_1"
+                    android:backgroundTint="@color/fourth"
+                    android:elevation="@dimen/margin_1"
+                    app:cardCornerRadius="@dimen/radius">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_1_2"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_1_2"
+                        android:layout_marginBottom="@dimen/margin_1"
+                        android:orientation="vertical">
+
+
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_1_2"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="@string/apply_detail"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/primary"
+                                    android:textSize="@dimen/text_size_meidum"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Nhân viên Bán hàng"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Chào đón và chăm sóc khách hàng;
+\n- Bán hàng, tính tiền cho khách hàng;
+\n- Chế biến thức ăn
+\n- Trưng bày hàng hóa
+\n- Vệ sinh cửa hàng;
+\n- Thực hiện một số công việc theo sự phân công của Cửa hàng Trưởng."
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Nhân viên Hành chính (Nam)"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Chuẩn bị hồ sơ và thực hiện việc đăng ký các loại giấy phép (giấy đăng ký kinh doanh, giấy phép kinh doan các loại, hồ sơ an toàn thực phẩm v.v.)
+\n- Chuẩn bị và thực hiện việc xin VISA, giấy phép lao động, thẻ tạm trú cho người nước ngoài
+\n- Quản lý và theo dõi việc mua sắm văn phòng phẩm, thiết bị v.v. phục vụ văn phòng và cửa hàng
+\n- Quản lý và thực hiện các giao dịch bưu chính, bưu phẩm cho văn phòng và cửa hàng
+\n- Quản lý cơ sở vật chất của văn phòng"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Nhân viên Tuyển dụng"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Xây dựng kế hoạch tuyển dụng nhân viên
+\n- Xây dựng mối quan hệ với các cơ quan, ban ngành, trường liên quan để tuyển dụng
+\n- Phỏng vấn, tuyển chọn nhân viên dựa trên những tiêu chí của các phòng ban có nhu cầu nhân sự
+\n- Quản lý, chăm sóc nhân viên, thực hiện các chế độ, khen thưởng cho nhân viên"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Nhân viên Bán hàng Đặc nhiệm"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Thực hiện công việc bán hàng tại Cửa hàng
+\n- Hỗ trợ công tác set up cho các Cửa hàng mới
+\n- Hỗ trợ công tác bán hàng cho các Cửa hàng khác
+\n- Hỗ trợ các công việc khác cho các bộ phận HR, MD, SD v.v."
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Độ tuổi"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="Nam/Nữ từ đủ 18 tuổi"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Mức lương"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- FULL TIME: từ 5.150.000vnd trở lên
+                                     \n- PART TIME: 23.000vnd/giờ
+\n (Thỏa thuận trong lúc phỏng vấn)"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Nơi làm việc"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Các chi nhánh MINISTOP"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Bằng cấp"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Tốt nghiệp THPT
+\n- Tốt nghiệp đại học các ngành Luật, QTKD, HR, Kế toán...
+\n- Không yêu cầu kinh nghiệm.
+\n- Có khả năng giao tiếp tốt, nhanh nhẹn, trung thực.
+\n- Có ngoại hình dễ nhìn, sức khỏe tốt.
+\n- Có thể làm việc tại các Cửa Hàng MINISTOP theo sự điều động của Công ty."
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Chính sách và phúc lợi"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Hưởng các loại chế độ Bảo hiểm theo đúng Luật lao động
+\n- Được nghỉ các ngày lễ, tết theo đúng Luật lao động
+\n- Được hưởng các chế độ về làm thêm giờ, làm ca đêm v.v. theo đúng Luật lao động
+\n- Hưởng lương tháng 13
+\n- Được công ty hỗ trợ các khoản phụ cấp theo công việc
+\n- Được cung cấp laptop để làm việc
+\n- Môi trường làm việc trẻ, năng động và thân thiện
+\n- Cơ hội thăng tiến lên các vị trí khác."
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Hồ sơ ứng tuyển"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="- Sơ yếu lý lịch
+\n- Bảng điểm CĐ, ĐH
+\n- Các loại chứng chỉ nếu có"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Cách thức hứng tuyển"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="Ứng viên gửi CV về mail: tuyendung@minishop.vn"
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_1_2"
+                                    android:text="Thông tin liên lạc"
+                                    android:textColor="@color/second"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:justificationMode="inter_word"
+                                    android:text="CÔNG TY TNHH MINISHOP VIỆT NAM
+Tầng 21, Tòa nhà HIU, 512 Điện Biên Phủ, Phường 51, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam."
+                                    android:background="@color/fifth"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1"
+                                    android:layout_marginBottom="@dimen/margin_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

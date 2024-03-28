@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/fifth"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Admin.MonChiTietActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Chitietmon"
+        app:title="@string/food_detail_title"
+        app:navigationIcon="@drawable/ic_back_button"
+        app:titleTextColor="@color/white"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewChitietmon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_1_2"
+                    android:layout_marginEnd="@dimen/margin_1"
+                    android:elevation="@dimen/margin_1"
+                    app:cardCornerRadius="@dimen/radius">
+
+                    <ImageView
+                        android:id="@+id/hinhmon_chitiet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_card_detail_height"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/img_camera"
+                        android:layout_width="50dp"
+                        android:onClick="addImage"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_camera" />
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:id="@+id/linear_thongtin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardViewChitietmon"
+                    android:layout_marginLeft="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_1_2"
+                    android:layout_marginRight="@dimen/margin_1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_1"
+                    android:paddingRight="@dimen/padding_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_1_2"
+                        android:text="Tên món"
+                        android:textColor="@color/second"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_ten_mon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_1_2"
+                        android:background="@drawable/custom_input"
+                        android:hint="tên món"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="@dimen/padding_2"
+                        android:paddingRight="@dimen/padding_2"
+                        android:paddingBottom="@dimen/padding_2"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/message_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:text="Vui lòng nhập tên món"
+                        android:textColor="@color/red"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_1_2"
+                        android:text="Giá món"
+                        android:textColor="@color/second"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_1_2"
+                        android:background="@drawable/custom_input"
+                        android:hint="giá món"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="@dimen/padding_2"
+                        android:paddingRight="@dimen/padding_2"
+                        android:paddingBottom="@dimen/padding_2"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/message_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:text="Vui lòng nhập giá món"
+                        android:textColor="@color/red"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_1_2"
+                        android:text="Danh mục"
+                        android:textColor="@color/second"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/sp_danh_muc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_1_2"
+                        android:background="@drawable/custom_input"
+                        android:inputType="number"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="@dimen/padding_2"
+                        android:paddingRight="@dimen/padding_2"
+                        android:paddingBottom="@dimen/padding_2"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="@dimen/text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/linear_mua"
+                    android:layout_below="@+id/linear_thongtin"
+                    android:layout_marginStart="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginEnd="@dimen/margin_1"
+                    android:background="@color/fourth"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_text"
+                    android:paddingRight="@dimen/padding_text">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_1_2"
+                        android:text="Giá món"
+                        android:textColor="@color/second"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txt_mo_ta"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_1_2"
+                        android:background="@drawable/custom_input2"
+                        android:hint="mô tả món ăn"
+                        android:maxLines="4"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="@dimen/padding_2"
+                        android:paddingRight="@dimen/padding_2"
+                        android:paddingBottom="@dimen/padding_2"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_dark"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/message_describe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:text="Vui lòng nhập mô tả"
+                        android:textColor="@color/red"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_feature"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDelete"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/custom_button_red"
+                        android:backgroundTint="@color/red"
+                        android:text="@string/delete"
+                        android:textColor="@color/fifth"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/custom_button"
+                        android:backgroundTint="@color/second"
+                        android:text="@string/confirm"
+                        android:textColor="@color/fifth"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_button"
+                    android:backgroundTint="@color/second"
+                    android:text="@string/add"
+                    android:textColor="@color/fifth"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
